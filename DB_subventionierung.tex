@@ -1,0 +1,275 @@
+ \documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\title{2 für 1: Subventionieren Fahrgäste der 2. Klasse bei der Deutschen Bahn die 1. Klasse?}
+\author{Felix Zesch}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Eine kürzlich veröffentlichte These lautet, dass bei der Deutschen Bahn die geringe Auslastung der 1. Klasse auf eine Subvention der 1. Klasse durch Fahrgäste der 2. Klasse hindeute. In diesem Artikel wird eine Ungleichung abgeleitet, die Schranken zur Bestätigung bzw. Falsifizierung der Hypothese für jede Zugfahrt angeben kann. Anhand öffentlich zugänglicher Daten wird beispielhaft für die Strecke Berlin-München festgestellt: Sofern die Betriebskosten pro Sitz in der 1. Klasse mehr als 16\% über den Betriebskosten pro Sitz der 2. Klasse liegen, und sofern die auf die 1. Klasse umlegbaren Kosten einer Zugfahrt größer als 32\% der auf die 2. Klasse umlegbaren Kosten einer Zugfahrt sind, lässt sich die Hypothese der Subvention für die 1. Klasse aufrechterhalten. Sollten diese Schranken unterschritten werden, lässt sich die Hypothese nicht aufrechterhalten.
+\end{abstract}
+
+\section{Einleitung}
+Im Artikel \textit{"Deutsche Bahn: Finanziert die zweite Klasse die teure erste Klasse mit?"} \footnote{Siehe http://www.tagesspiegel.de/politik/deutsche-bahn-finanziert-die-zweite-klasse-die-teure-erste-klasse-mit/14756914.html} spekuliert Jost Müller-Neuhof, dass die geringe Auslastung der 1. Klasse auf eine Subvention der 1. Klasse durch Fahrgäste der 2. Klasse hindeute. In diesem Artikel werden anhand dieser Annahme und öffentlich zugänglicher Informationen Bedingungen abgeleitet, unter denen die Subventionshypothese nicht verworfen werden kann. Sollten diese Bedingungen nicht erfüllt sein, lässt sich die Subventionshypothese nicht aufrechterhalten.
+
+\section{Mathematische Modellierung}
+\subsection{Variablen}
+
+\quad \quad $i$ - Index für die Klasse, $i \in {1,2}$
+
+$U_i$ - Umsatz einer Zugfahrt in der jeweiligen Klasse
+
+$K_i$ - Summe der einer Klasse $i$ zurechenbaren Kosten, wobei $\sum_{i=1}^2 K_i$ die Gesamtkosten einer Zugfahrt sind.
+
+$\bar P_i$ - Mittlerer Fahrkartenpreis in der jeweiligen Klasse
+
+$N_i$ - Anzahl der verkauften Fahrkarten 
+
+$S_i$ - Sitze je Klasse (1,2) oder insgesamt (T)
+
+$\mu_i$ - Auslastung in der jeweiligen Klasse
+
+$\delta_K$ - Zuschlagsfaktor Kosten 1. Klasse 
+
+$\delta_P$ - Zuschlagsfaktor Fahrkartenpreis 1. Klasse 
+
+Wir gehen davon aus, dass die Zugfahrten insgesamt nicht defizitär sind. Das bedeutet, dass der erzielte Umsatz in beiden Klassen die Kosten einer Zugfahrt übersteigt. 
+
+Es wird angenommen, dass sich die einer Zugfahrt zurechenbaren Kosten auf die 1. und 2. Klasse umlegen lassen, z.B. durch Gemeinkostenzuschläge für Fixkosten. Quersubventionierung durch Verkäufe im Bordrestaurant u.ä. werden nicht betrachtet.
+
+\begin{equation}
+ U_1 + U_2 \geq K_1 + K_2
+\end{equation}
+
+Wir nehmen an, dass eine Quersubvention zwischen den Klassen stattfindet: Die 1. Klasse subventioniert die 2. Klasse. Die 2. Klasse arbeitet wirtschaftlich. 
+
+\begin{equation}
+ U_1 < K_1 
+\label{U1P1N1}
+ \end{equation}
+
+\begin{equation}
+ U_2 \geq K_2
+ \label{U2P2N2}
+\end{equation}
+
+Die Motivation für diese Annahme ist mathematischer Natur, da durch die ungleichen Relationszeichen in den Ungleichungen (\ref{U1P1N1}) und (\ref{U2P2N2}) später eine Überführung beider Ungleichungen in eine Ungleichung (\ref{2mach1}) möglich wird. Wären die Relationszeichen gleich, wäre die Umformung nicht zulässig.
+
+Daraus lassen sich später Bedingungen ableiten, unter denen diese Subventionierung gilt.
+
+Der Umsatz setzt sich aus dem mittleren Fahrkartenpreis $\bar P$ und der Anzahl der verkauften Fahrkarten $N$ zusammen.
+
+\begin{equation}
+U_1 = \bar P_1 \cdot N_1
+\end{equation}
+
+\begin{equation}
+U_2 = \bar P_2 \cdot N_2
+\end{equation}
+
+Die Anzahl der verkauften Fahrkarten steht im Verhältnis zur Auslastung $\mu_i$ und der Kapazität $S_i$, also der Anzahl verfügbarer Sitze in einem Zug bzw. für eine Klasse $i$.
+
+\begin{equation}
+N_1 = \mu_1 \cdot S_1
+\end{equation}
+
+\begin{equation}
+N_2 = \mu_2 \cdot S_2
+\end{equation}
+
+Die Gesamtzahl an Sitzen in einem Zug $S_T=S_1 + S_2$ ist bekannt. Daher ergibt sich:
+
+\begin{equation}
+S_1 = S_T - S_2
+\end{equation}
+
+und wir erhalten
+
+\begin{equation}
+N_1 = \mu_1 \cdot  (S_T - S_2)
+\end{equation}
+
+Das Verhältnis der Fahrkartenpreise in 1. und 2. Klasse $\delta_P=\bar P_1/\bar P_2$ mit $\delta_P > 1$ wird als Hilfsgröße eingeführt. Es kann später empirisch ermittelt werden. Nach $\bar P_1$ umgestellt ergibt sich:
+ 
+\begin{equation}
+\bar P_1 = \delta_P \cdot \bar P_2
+\end{equation}
+
+Da in der ersten Klasse ein aufwändigeres Angebot geleistet wird (z.B. durch kostenlose Tageszeitungen, höhere Beinfreiheit, Getränke am Platz usw.), gibt es ein Kostenverhältnis $\delta_K = K_1/K_2$ mit $\delta_K>1$. Damit erhalten wir zwei Ungleichungen mit zwei Unbekannten $\bar P_2$ und $K_2$.
+
+Wir können also Ungleichung (\ref{U1P1N1}) umformen zu:
+
+\begin{equation}
+\delta_P \cdot \bar P_2 \cdot \mu_1 \cdot  (S_T - S_2) < \delta_K \cdot K_2
+\label{U1eingesetzt}
+ \end{equation}
+ 
+ und für die 2. Klasse ergibt Ungleichung (\ref{U2P2N2}):
+ 
+ \begin{equation}
+  \bar P_2 \cdot \mu_2 \cdot S_2 \geq K_2 
+ \end{equation}
+
+Durch die Relationsbeziehungen $\geq$ und $<$ lässt sich $K_2$ eliminieren:
+
+ \begin{equation}
+ \bar P_2 \cdot \mu_2 \cdot S_2 \geq \frac{\delta_P \cdot \mu_1 \cdot  (S_T - S_2)}{\delta_K} \bar P_2
+ \label{2mach1}
+ \end{equation}
+ 
+ Da $\bar P_2>0$ erhalten wir nach Division durch $\bar P_2$:
+ 
+ \begin{equation}
+\mu_2 \cdot S_2 \geq \frac{\delta_P \cdot \mu_1 \cdot  (S_T - S_2)}{\delta_K} 
+ \end{equation} 
+ 
+ \begin{equation}
+ \delta_K \cdot \mu_2 \cdot S_2 \geq  \delta_P \cdot \mu_1 \cdot  (S_T - S_2) 
+ \end{equation}
+
+Schließlich ergibt sich das Grundmodell, das im nächsten Abschnitt zur Ermittlung von Schranken verwendet wird:
+
+ \begin{equation}
+\frac{\delta_K}{\delta_P} \geq  \frac{\mu_1}{\mu_2} \cdot  \left( \frac{S_T}{S_2 } - 1 \right)
+\label{finINEQ}
+ \end{equation}
+ 
+
+ 
+ \section{Ermittlung von Schranken}
+ \subsection{Daten} \label{Daten}
+ Von den Variablen in Ungleichung (\ref{finINEQ}) sind folgende bekannt:
+
+ $S_1$ - 98 in einem ICE 3 
+ 
+ $S_2$ - 356 in einem ICE 3
+ 
+ $S_T$ - 454 in einem ICE 3
+ 
+ $\delta_P$ - Wenn man das Verhältnis der Normalpreise zu Grunde legt ergibt sich z.B. für die Strecke Berlin-München ein Verhältnis von $237/142$
+ 
+ $\mu_1$ - 0.39
+ 
+ $\mu_2$ - 0.56
+ 
+\subsection{Kosten pro Klasse} 
+ Die einzige Unbekannte ist das Kostenverhältnis $\delta_K$, da die Bahn dazu aus Wettbewerbsgründen keine Angaben machen will. Um einen Wert dafür zu ermitteln, kann die Ungleichung (\ref{finINEQ}) nach $\delta_K$ umgestellt werden.
+ 
+ 
+ \begin{equation}
+\delta_K \geq  \frac{\mu_1}{\mu_2} \cdot  \left( \frac{S_T}{S_2 } - 1 \right) \cdot \delta_P
+\label{solv1}
+ \end{equation}
+  
+ 
+\begin{equation}
+\delta_K \geq \frac{0.39}{0.56} \cdot \left( \frac{454} {356}  - 1 \right)  \frac{237}{142} 
+\label{solvnum}
+\end{equation}
+
+\begin{equation}
+\delta_K* \geq \frac{64701}{202208} = 0.31997
+\label{solution}
+\end{equation}
+
+Das bedeutet, dass sofern $K_1 \geq 0.27 \cdot K_2$, also die Summe der Kosten, die der 1. Klasse bei einer Zugfahrt zugerechnet werden können, größer als 27\% der Summe der Kosten ist, die bei einer Zugfahrt der zweiten Klasse zugerechnet werden können, die Annahme, dass die Fahrgäste der zweiten Klasse die Fahrgäste der 1. Klasse subventionieren, nicht zu einem Widerspruch führt.
+
+Um diese Größenangabe einschätzen zu können, kann als Vergleichswert der Anteil der Kosten berechnet werden, der anfallen würde, wenn die Kosten pro Sitz in der ersten und zweiten Klasse gleich wären: 
+Das Verhältnis $S_1/S_T$ beträgt in einem ICE 3 $98/454 = 21.59\%$. Würden die Kosten pro Sitz in der 1. und Z. Klasse gleich sein, würde gelten $K_1 = 98/454 \cdot (K_1 + K_2)$. Dies lässt sich umformen zu $(454/98 - 1)\cdot K_1 = K_2$ und schließlich $\frac{K_1}{K_2} = \delta_{\bar K} \geq \frac{98}{356} = 0.27528$. Dies entspricht natürlich dem Verhältnis $S_1/S_2$. 
+
+Die Differenz zwischen $\delta_K*$ und $\delta_{\bar K}$ beträgt 0.044689. Dieser Unterschied erscheint relativ gering. Es liegt die Vermutung nahe, dass damit kein Widerspruch zur Annahme einer Subvention der ersten Klasse durch die zweite Klasse erzeugt werden kann.
+
+\subsection{Kosten pro Sitz}
+
+Die Gesamtkosten in den beiden Klassen lassen sich linearisieren, wobei $C_i$ den Kostensatz pro Sitz angibt. 
+
+\begin{equation}
+\delta_K = \frac{K_1}{K_2} = \frac{S_1 \cdot C_1}{S_2 \cdot C_2}
+\label{linearization}
+\end{equation}
+
+Mit der bekannten Beziehung zwischen Sitzen je Klasse $S_T = S_1 + S_2$ ergibt sich dann:
+
+\begin{equation}
+\delta_K = \frac{(S_T-S_2) \cdot C_1}{S_2 \cdot C_2} = \left(\frac{S_T}{S_2} - 1 \right) \frac{C_1}{C_2}
+\label{linearizationeingesetzt}
+\end{equation}
+
+Wenn dies in die linke Seite von Ungleichung (\ref{solv1}) eingesetzt wird, ergibt sich:
+
+\begin{equation}
+\left(\frac{S_T}{S_2} - 1 \right) \frac{C_1}{C_2} \geq \frac{\mu_1}{\mu_2} \cdot  \left( \frac{S_T}{S_2 } - 1 \right) \cdot \delta_P
+\label{deltakrein}
+\end{equation}
+
+
+\begin{equation}
+\frac{C_1}{C_2} \geq  \frac{\mu_1}{\mu_2} \cdot  \delta_P
+\label{deltakrein2}
+\end{equation}
+
+Und nach Einsetzen der Zahlen aus \ref{Daten}:
+
+
+\begin{equation}
+ \frac{C_1}{C_2} \geq 1.16 
+\label{deltaknum}
+\end{equation}
+
+Sofern die Betriebskosten je Sitz in der 1. Klasse um mehr als 16\% über denen der 2. Klasse liegen, liegt kein Widerspruch zur These der Subventionierung vor.
+
+\subsection{Qualitative Betrachtung}
+
+Außerdem ist mit $\delta_P = \bar P_1/\bar P_2$ und Ungleichung (\ref{deltakrein2}) eine qualitative Betrachtung möglich:
+
+\begin{equation}
+\overbrace{\frac{C_1}{C_2}}^{>1} \geq  \overbrace{\frac{\bar P_1}{\bar P_2}}^{>1} \cdot \overbrace{\frac{\mu_1}{\mu_2}}^{<1}
+\label{quali}
+\end{equation}
+
+Die Quotienten aus Betriebskosten pro Sitz und durchschnittlichem Fahrkarten Preis sind jeweils größer als eins, während das Verhältnis der Auslastungen kleiner als 1 ist. 
+
+Wenn die Auslastung der zweiten Klasse $\mu_2$ sehr stark sinkt, ist anzunehmen, dass die Ungleichung nicht mehr erfüllt ist, und damit die These der Subventionierung nicht mehr aufrecht erhalten kann. Dies entspricht dem realen Umstand, dass bei einem Einbruch der Fahrgastzahlen in der zweiten Klasse keine Subvention der ersten Klasse mehr möglich ist.
+
+Analog ist die These der Subvention nicht mehr haltbar, wenn die Auslastung der ersten Klasse $\mu_1$ stark steigt. Dies entspricht dem realen Umstand, dass bei einer hohen Auslastung der höherpreisigen ersten Klasse keine Subvention mehr nötig ist, da die Annahme des Defizits in Ungleichung (\ref{U1P1N1}) nicht mehr erfüllt ist.
+
+\subsubsection{Fahrpreisgestaltung}
+
+Es lassen sich noch Überlegungen zum sich aus dem Verhältnis von Betriebskosten pro Sitz $C_i$ und Fahrkartenpreis $\bar P_i$ anstellen. Sollte der durchschnittliche Preis aller verkauften Fahrkarten in der 1. Klasse $\bar P_1$ unter den Betriebskosten pro Sitz liegen, ist offensichtlich von einer Subventionierung auszugehen, sofern die Zugfahrt insgesamt profitabel ist: Da für die rechte Seite von Ungleichung (\ref{Grenzertrag}) $\mu_1/\mu_2 < 1$ gilt, ist die Ungleichung erfüllt, sofern die 1. Klasse defizitär ist, also $C_1 > \bar P_1$ und die 2. Klasse mit Gewinn arbeitet, also $C_2 > \bar P_2$. Dann ist der Zähler der linken Seite größer eins und der Nenner kleiner eins, so dass die linke Seite von Ungleichung (\ref{Grenzertrag}) größer eins und die rechte Seite kleiner eins ist.
+ In diesem Fall ist Ungleichung (\ref{Grenzertrag}) in jedem Fall erfüllt und es lässt sich für diese Ungleichung kein Widerspruch konstruieren.
+
+% andere Formatierung der Doppelbrüche ist leider auch nicht schöner
+%\begin{equation}
+%\frac{\left. C_1 \middle/ \bar P_1 \right.}{\left. C_2 \middle./ \bar %P_2 \right.} \geq  \frac{\mu_1}{\mu_2}
+%\label{Grenzertrag}
+%\end{equation}
+
+\begin{equation}
+\overbrace{\left. \underbrace{{\frac{C_1}{\bar P_1}}}_{\textrm{$>1$ bei Defizit}} \middle/ {\underbrace{\frac{C_2}{\bar P_2}}_{< 1}} \right. }^{\textrm{$>1$ bei Defizit}} \geq  \overbrace{\frac{\mu_1}{\mu_2}}^{<1}
+\label{Grenzertrag}
+\end{equation}
+
+\section{Ergebnis}
+
+Aus dem oben genannten erfolgt, dass 
+\begin{itemize}
+\item sofern die Betriebskosten pro Sitz in der 1. Klasse mehr als 16\% über den Betriebskosten pro Sitz der 2. Klasse liegen, 
+\item sofern die auf die 1. Klasse umlegbaren Kosten einer Zugfahrt größer als 31\% der auf die 2. Klasse umlegbaren Kosten einer Zugfahrt sind
+\end{itemize}
+
+die Aussage, dass die Fahrgäste der zweiten Klasse die Fahrgäste der 1. Klasse subventionieren, \textit{nicht} zu einem Widerspruch führt. 
+
+Wie zulässig diese Bedingungen sind, kann eine differenzierte, auf Realdaten basierende, quantitative Betrachtung der Kostenseite zeigen.
+
+\subsection{Einschränkungen und Ausblick}
+Es sind viele Erweiterungen des vorgestellten Ansatzes möglich. Zwei seien hier angeführt.
+
+\subsubsection{Mehr Fahrten, mehr Daten}
+Denkbar ist eine differenziertere Abbildung der Kostenstruktur für Zugfahrten, die Fixkosten und variable Kosten unterscheidet. 
+
+\subsubsection{Schätzer für das Verhältnis der Fahrkartenpreise}
+Um mit dem vorgestellten Modell auf numerischem Wege zu einer verlässlicheren Aussage bezüglich der Schranken zu kommen, ist eine Betrachtung weiterer Strecken sinnvoll. Für die Abschätzung des Verhältnisses $\delta_P$ ist zudem zu prüfen, ob das Verhältnis der Normalpreise wirklich eine gute Näherung darstellt. Denkbar ist, dass in der 2. Klasse tendenziell mehr Sparpreise gekauft werden als in der 1. Damit würde man das Verhältnis mit der Normalpreisnäherung unterschätzen. Dies bedeutet, dass $\delta_P$ real größer ist und laut Ungleichung (\ref{finINEQ}) die untere Schranke damit größer wird. Wenn die untere Schranke für das Verhältnis der Kosten steigt, gibt es weniger Fälle, in denen ein solches Verhältnis auch beobachtet werden kann und die Subventionshypothese aufrecht erhalten kann.
+\end{document}
