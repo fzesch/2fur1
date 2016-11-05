@@ -7,4 +7,4 @@ For web publication, a single html file can be generated from the latex file wit
 
     htlatex DB_subventionierung.tex "xhtml, mathml" -cunihtf
 	
-This file can then be processed further and be included in static site generators like in my blog.
+This file can then be processed further and be included in static site generators like in [my blog](http://www.felix-zesch.de/blog/2-fur-1/).
